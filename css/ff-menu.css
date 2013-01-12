@@ -1,0 +1,53 @@
+/*Sliding Text and Icon Menu Style*/
+@font-face {
+	font-family: 'BernSans';
+	src:url(../fonts/BernSansCT-Regular_0.otf);
+}
+@font-face {
+	font-family: 'WireOne';
+	src:url(../fonts/WireOne.ttf);
+}
+.ff-sti-menu{
+	width:100%;
+	position: fixed;
+	margin-top: 25px;
+}
+.ff-sti-menu li{
+	float:right;
+	width:120px;
+	height:120px;
+	margin-right: 25px;
+}
+.ff-sti-menu li a{
+	display:block;
+	overflow:hidden;
+	background:#fff;
+	text-align:center;
+	height:100%;
+	width:100%;
+	position:relative;
+	-webkit-box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 20px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 20px rgba(50, 50, 50, 0.75);
+}
+.ff-sti-menu li a h2{
+	color:#000;
+	font-family: 'WireOne'; 
+	font-size:30px;
+	font-weight: bold;
+	text-transform:uppercase;
+	position:absolute;
+	width:100px;
+	text-shadow: 0px 1px 1px black;
+	margin: 50px 10px;
+}
+.ff-sti-icon{
+	width:100px;
+	height:100px;
+	position:absolute;
+	background-position:top left;
+	background-repeat:no-repeat;
+	background-color:transparent;
+	left:50px;
+	top:30px;
+}

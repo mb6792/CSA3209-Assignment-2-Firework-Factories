@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fireworksFactories>
+  <fireworksFact>
+    <lat>36.05159714761575</lat>
+    <long>14.27072525024414</long>
+    <placeName>Xaghra2erw</placeName>
+    <sitePlan/>
+    <images>
+      <image/>
+      <image/>
+      <image/>
+      <image/>
+    </images>
+    <personnelDetails>test2123131</personnelDetails>
+    <productionStorage>test332141</productionStorage>
+  </fireworksFact>
+  <fireworksFact>
+    <lat>36.059368782721876</lat>
+    <long>14.231071472167969</long>
+    <placeName>Santa lucija</placeName>
+    <sitePlan></sitePlan>
+    <images>
+      <image></image>
+      <image></image>
+      <image></image>
+      <image></image>
+    </images>
+    <personnelDetails>test2123131</personnelDetails>
+    <productionStorage>test332141</productionStorage>
+  </fireworksFact>
+</fireworksFactories>

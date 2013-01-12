@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fireworks Factories</title>
+		<link rel="stylesheet" href="../css/styles.css" type="text/css">
+		<link rel="stylesheet" href="../css/stimenu.css" type="text/css">
+		<link rel="stylesheet" href="../css/ff-menu.css" type="text/css">
+		<link rel="stylesheet" href="../css/bottom-menu.css" type="text/css">
+		
+		<link rel="stylesheet" href="../css/add.css" type="text/css">
+	</head>
+	 
+	<body onload="getLocation('../php/test1.xml')">
+		<div id="side-menu">
+			<div id="sideback"></div>
+			<div id="sidecontents">
+				<div id="logo">
+					<a href="index.html"><img src="../images/logo.png" alt="logo" width="170" height="170"></a>
+				</div>
+				
+				<div id="menu">
+					<ul id="sti-menu" class="sti-menu">
+						<li data-hovercolor="#37c5e9">
+							<a href="../fireworksfactories.html">
+								<h2 data-type="mText" class="sti-item">Fireworks Factories</h2>
+								<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+							</a>
+						</li>
+						<li data-hovercolor="#ff395e">
+							<a href="../cpdstations.html">
+								<h2 data-type="mText" class="sti-item">CPD Stations</h2>
+								<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<script type="text/javascript" src="../js/jquery.min.js"></script>
+			<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+			<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+			<script type="text/javascript" src="../js/jquery.iconmenu.js"></script>
+		
+			<script type="text/javascript" src="../js/menu.js"></script>
+			
+			<div id="footer">
+				<p><a href="http://www.mark-bonnici.com">designedbymark.com</a></p>
+			</div>
+		</div>
+		
+		<div id="mapholder"></div>
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="../js/maps/ff-map-ffs.js"></script>
+		
+		<section id="addinfo-menu">
+			<div id="ai-menu-back"></div>
+			<div id="ai-menu-content">
+				<div id="add-form">
+					<div id="marForm">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<script>
+			getPersDet();
+			
+			function getPersDet(){
+				var fileLoc = "../php/test1.xml";
+				if(fileExists(fileLoc)){
+					var xmlDocument = loadXml(fileLoc);
+					getFFS(xmlDocument);
+				}else{
+					alert("XML File not found in " + fileLoc);
+				}
+			}
+			
+			function getFFS(xmlDocument){
+				var ffs = xmlDocument.getElementsByTagName('fireworksFact');
+				var ni = document.getElementById('marForm');
+				
+				var selectedFFS = localStorage.ffs;
+				
+				var images = ffs[selectedFFS].getElementsByTagName('images')[0].getElementsByTagName('image');
+				for(var i = 0; i < images.length; i++){
+					var image = images[i].childNodes[0].nodeValue;
+					var newdiv = document.createElement('a');
+					newdiv.setAttribute('href', '../uploads/' + image);
+					newdiv.innerHTML = "<p>" + image + "<p>";
+					ni.appendChild(newdiv);
+				}
+			}
+		</script>
+	</body>
+</html>

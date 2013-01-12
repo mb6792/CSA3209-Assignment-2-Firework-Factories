@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSA3209 Assignment 2</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="css/stimenu.css" type="text/css">
+		
+		<link rel="stylesheet" href="css/slideshow/demo.css" type="text/css">
+		<link rel="stylesheet" href="css/slideshow/style2.css" type="text/css">
+
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+		
+		<script type="text/javascript">
+			$(window).load(function(){
+				$("#map").draggable({
+						containment: [-1200, -1680, 0, 0]
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="side-menu">
+			<div id="sideback"></div>
+			<div id="sidecontents">
+				<div id="logo">
+					
+					<a href="index.html"><img src="images/logo.png" alt="logo" width="170" height="170"></a>
+				</div>
+				
+				<div id="menu">
+					<ul id="sti-menu" class="sti-menu">
+						<li data-hovercolor="#37c5e9">
+							<a href="fireworksfactories.html">
+								<h2 data-type="mText" class="sti-item">Fireworks Factories</h2>
+								<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+							</a>
+						</li>
+						<li data-hovercolor="#ff395e">
+							<a href="cpdstations.html">
+								<h2 data-type="mText" class="sti-item">CPD Stations</h2>
+								<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div id="footer">
+					<p><a href="http://www.mark-bonnici.com">designedbymark.com</a></p>
+				</div>
+			</div><!--sidecontents-->
+		</div> <!--side-menu-->
+		
+		
+		<div id="mapcontainer">
+			<p id="map" class="ui-draggable"><img src="images/malta-map.jpg" alt="malta-map" width="3207" height="2700"></p>    
+		</div>		
+		
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.iconmenu.js"></script>
+		
+		<script type="text/javascript" src="js/menu.js"></script>
+	</body>
+</html>
+
